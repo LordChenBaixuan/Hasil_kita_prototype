@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HasilKita - Dari Petani Untuk Negeri</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400&family=Cairo:wght@400&family=Poppins:wght@700;800&family=Bebas+Neue:wght@400&family=Bellota+Text:wght@700&family=Be+Vietnam:wght@600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>HasilKita</h1>
+            </div>
+            <nav class="nav">
+                <a href="#" class="nav-link active">Beranda</a>
+                <a href="" class="nav-link">Kategori</a>
+                <a href="about_us.html" class="nav-link">Tentang Kami</a>
+            </nav>
+            <div class="auth-buttons">
+                <div class="cart-icon">
+                    <svg width="37" height="37" viewBox="0 0 37 37" fill="none">
+                        <path
+                            d="M26.1846 29.4843C28.2198 29.4843 29.8846 31.1751 29.8846 33.2422C29.8846 35.3092 28.2198 37 26.1846 37C24.1494 37 22.4845 35.3092 22.4845 33.2422C22.4846 31.175 24.1495 29.4843 26.1846 29.4843ZM37 0V3.7578H33.3L26.6397 17.4595L29.4243 22.0623C29.7017 22.532 29.8868 23.1898 29.8868 23.8477C29.8868 26.3634 28.1947 27.6055 25.9 27.6055H4.26923V23.9922H25.447C25.7243 23.9922 25.9095 23.8041 25.9095 23.5225C25.9095 23.4289 25.7132 23.0528 25.7132 23.0528L23.8648 20.0899H10.0829C8.69527 20.0899 7.49214 19.3386 6.84536 18.1174L0.185179 6.48266C0.0751577 6.26036 1.43051e-06 5.91845 1.43051e-06 5.5433C1.43051e-06 4.50936 0.832856 3.75789 1.85 3.75789H29.2296L30.9875 0H37ZM7.96932 29.4843C10.0045 29.4843 11.6693 31.1751 11.6693 33.2422C11.6693 35.3092 10.0045 37 7.96932 37C5.93414 37 4.26923 35.3091 4.26923 33.2421C4.26923 31.175 5.93414 29.4843 7.96932 29.4843Z"
+                            fill="#27C100" />
+                    </svg>
+                    <!-- Sebelum Login -->
+                </div id="before-login" class="before-login">
+                <a href="login.html" class="btn btn-outline">Masuk</a>
+                <a href="register.html" class="btn btn-primary">Daftar</a>
+            </div>
+
+            <!-- Setelah Login -->
+            <div id="after-login" class="after-login" style="display: none;">
+                <img src="assets/user-icon.png" alt="User Icon" class="user-icon" />
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <img src="asset/Beranda/background_beranda.jpg" class="hero-image" />
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="hero-title-white">DARI </span>
+                <span class="hero-title-green">PETANI</span>
+            </h1>
+            <h2 class="hero-subtitle">UNTUK NEGERI</h2>
+            <p class="hero-description">
+                Kami menyuplai produk hasil pertanian untuk mendukung petani Indonesia
+            </p>
+            <button class="btn btn-hero">Lihat selengkapnya ></button>
+        </div>
+    </section>
+
+    <!-- Feature Cards -->
+    <section class="features">
+        <div class="features-container">
+            <div class="feature-card feature-vegetables sayuran-bg  ">
+                <div class="feature-background"></div>
+                <div class="feature-content">
+                    <img src="asset/Beranda/sayuran.png" alt="Vegetables" class="feature-image" />
+                    <div class="feature-text">
+                        <p>Segar & Manis</p>
+                        <h3>SAYURAN</h3>
+                        <a href="market/market_sayur.html" class="feature-link">klik disini</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-card feature-fruits buah-bg">
+                <div class="feature-background"></div>
+                <div class="feature-content">
+                    <img src="asset/Beranda/buah.png" alt="Fruits" class="feature-image" />
+                    <div class="feature-text">
+                        <p>Segar & Nikmat</p>
+                        <h3>BUAH</h3>
+                        <a href="market/market_sayur.html" class="feature-link">klik disini</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-card feature-seeds bibit-bg">
+                <div class="feature-background"></div>
+                <div class="feature-content">
+                    <img src="asset/Beranda/bibit_unggul.png" alt="Seeds" class="feature-image" />
+                    <div class="feature-text">
+                        <p>Berkualitas & Terjamin</p>
+                        <h3>BIBIT UNGGUL</h3>
+                        <a href="market/market_bibit.html" class="feature-link">klik disini</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Recommendations -->
+    <section class="recommendations">
+        <div class="container">
+            <h2 class="section-title">Yang mungkin anda suka</h2>
+            <div class="recommendation-items">
+                <div class="recommendation-item">
+                    <img src="asset/sayur_bayam.png" alt="Vegetables" />
+                </div>
+                <div class="recommendation-item">
+                    <img src="asset/wortel.png" alt="Carrots" />
+                </div>
+                <div class="recommendation-item">
+                    <img src="asset/apel_merah.png" alt="Apples" />
+                </div>
+                <div class="recommendation-item">
+                    <img src="asset/nanas.png" alt="Pineapple" />
+                </div>
+                <div class="recommendation-item placeholder">
+                    <span>SEGERA HADIR</span>
+                </div>
+                <div class="recommendation-item placeholder">
+                    <span>SEGERA HADIR</span>
+                </div>
+                <div class="recommendation-item placeholder">
+                    <span>SEGERA HADIR</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="container">
+            <!-- Vegetables Section -->
+            <div class="product-section">
+                <h2 class="product-section-title green">SAYURAN</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-badge">Baru</div>
+                        <img src="asset/sayur_bayam.png"
+                            alt="Sayur Bayam" class="product-image" />
+                        <h3 class="product-name green">Sayur Bayam</h3>
+                        <p class="product-price">Rp.7.000/Ikat</p>
+                        <button class="btn btn-cart green">Masukkan Keranjang</button>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-badge">Baru</div>
+                        <img src="asset/wortel.png"
+                            alt="Wortel" class="product-image" />
+                        <h3 class="product-name green">Wortel</h3>
+                        <p class="product-price">Rp.15.000/Kg</p>
+                        <button class="btn btn-cart green">Masukkan Keranjang</button>
+                    </div>
+                    <div class="product-card placeholder">
+                        <div class="placeholder-circle"></div>
+                        <span class="placeholder-text">SEGERA HADIR</span>
+                    </div>
+                    <div class="product-card placeholder">
+                        <div class="placeholder-circle"></div>
+                        <span class="placeholder-text">SEGERA HADIR</span>
+                    </div>
+                    <div class="product-card placeholder">
+                        <div class="placeholder-circle"></div>
+                        <span class="placeholder-text">SEGERA HADIR</span>
+                    </div>
+                    <div class="product-card placeholder">
+                        <div class="placeholder-circle"></div>
+                        <span class="placeholder-text">SEGERA HADIR</span>
+                    </div>
+                </div>
+                <a href="market/market_sayur.html" class="section-link green">Lihat selengkapnya ></a>
+            </div>
+
+            <!-- Fruits Section -->
+            <div class="product-section">
+                <h2 class="product-section-title orange">BUAH</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-badge">Baru</div>
+                        <img src="asset/apel_merah.png"
+                            alt="Apel Merah" class="product-image" />
+                        <h3 class="product-name orange">Apel Merah</h3>
+                        <p class="product-price">Rp.15.000/kg</p>
+                        <button class="btn btn-cart orange">Masukkan Keranjang</button>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-badge">Baru</div>
+                        <img src="asset/nanas.png"
+                            alt="Nanas" class="product-image" />
+                        <h3 class="product-name orange">Nanas</h3>
+                        <p class="product-price">Rp.15.000/Buah</p>
+                        <button class="btn btn-cart orange">Masukkan Keranjang</button>
+                    </div>
+                    <div class="product-card placeholder">
+                        <div class="placeholder-circle"></div>
+                        <span class="placeholder-text">SEGERA HADIR</span>
+                    </div>
+                    <div class="product-card placeholder">
+                        <div class="placeholder-circle"></div>
+                        <span class="placeholder-text">SEGERA HADIR</span>
+                    </div>
+                    <div class="product-card placeholder">
+                        <div class="placeholder-circle"></div>
+                        <span class="placeholder-text">SEGERA HADIR</span>
+                    </div>
+                    <div class="product-card placeholder">
+                        <div class="placeholder-circle"></div>
+                        <span class="placeholder-text">SEGERA HADIR</span>
+                    </div>
+                </div>
+                <a href="market/market_buah.html" class="section-link orange">Lihat selengkapnya ></a>
+            </div>
+
+            <!-- Seeds Section -->
+            <div class="product-section">
+                <h2 class="product-section-title brown">BIBIT</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-badge">Baru</div>
+                        <img src="asset/bibit_cabai.png" alt="Bibit Cabai" class="product-image" />
+                        <div class="product-overlay">
+                            <div class="product-icon brown"></div>
+                            <img src="asset/cabai.png" alt="Chili icon" class="product-mini-icon" />
+                        </div>
+                        <h3 class="product-name brown">Bibit Cabai</h3>
+                        <p class="product-price">Rp.35.000/10 gram</p>
+                        <button class="btn btn-cart brown">Masukkan Keranjang</button>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-badge">Baru</div>
+                        <img src="asset/bibit_mangga.png" alt="Bibit Mangga" class="product-image" />
+                        <div class="product-overlay">
+                            <div class="product-icon brown"></div>
+                            <img src="asset/mangga.png" alt="Mango icon" class="product-mini-icon" />
+                        </div>
+                        <h3 class="product-name brown">Bibit Mangga</h3>
+                        <p class="product-price">Rp.60.000/bibit</p>
+                        <button class="btn btn-cart brown">Masukkan Keranjang</button>
+                    </div>
+                    <div class="product-card placeholder">
+                        <div class="placeholder-circle"></div>
+                        <span class="placeholder-text">SEGERA HADIR</span>
+                    </div>
+                    <div class="product-card placeholder">
+                        <div class="placeholder-circle"></div>
+                        <span class="placeholder-text">SEGERA HADIR</span>
+                    </div>
+                    <div class="product-card placeholder">
+                        <div class="placeholder-circle"></div>
+                        <span class="placeholder-text">SEGERA HADIR</span>
+                    </div>
+                    <div class="product-card placeholder">
+                        <div class="placeholder-circle"></div>
+                        <span class="placeholder-text">SEGERA HADIR</span>
+                    </div>
+                </div>
+                <a href="market/market_bibit.html" class="section-link brown">Lihat selengkapnya ></a>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-grid">
+        <!-- Company Info -->
+        <div class="footer-section">
+          <h3 class="footer-brand">HasilKita</h3>
+          <p class="footer-description">
+            Kami sebagai supplier produk hasil pertanian berkualitas
+            langsung dari petani Indonesia ke tangan anda. Dengan kerjasama
+            yang kami lakukan maka kami pastikan produk kami dapat
+            mengimbangi produk populer lainnya.
+          </p>
+        </div>
+
+        <!-- Categories -->
+        <div class="footer-section">
+          <h4 class="footer-title">Kategori</h4>
+          <ul class="footer-list">
+            <li class="footer-item">
+              <svg class="footer-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26">
+                </polygon>
+              </svg>
+              <span class="footer-text">Sayur - Sayuran</span>
+            </li>
+            <li class="footer-item">
+              <svg class="footer-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26">
+                </polygon>
+              </svg>
+              <span class="footer-text">Buah - Buahan</span>
+            </li>
+            <li class="footer-item">
+              <svg class="footer-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26">
+                </polygon>
+              </svg>
+              <span class="footer-text">Bibit Unggul</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+          <h4 class="footer-title">Kontak Kami</h4>
+          <ul class="footer-list">
+            <li class="footer-item">
+              <svg class="footer-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26">
+                </polygon>
+              </svg>
+              <span class="footer-text">08xx-xxxx-xxxx</span>
+            </li>
+            <li class="footer-item">
+              <svg class="footer-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26">
+                </polygon>
+              </svg>
+              <span class="footer-text">hasilkita_id@gmail.com</span>
+            </li>
+            <li class="footer-item">
+              <svg class="footer-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26">
+                </polygon>
+              </svg>
+              <span class="footer-text">@HasilKita.id</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const isLoggedIn = localStorage.getItem("isLoggedIn");
+            const user = JSON.parse(localStorage.getItem("user"));
+
+            const authButtons = document.querySelector(".auth-buttons");
+
+            if (isLoggedIn === "true" && user) {
+                // Kosongkan elemen authButtons
+                authButtons.innerHTML = "";
+
+                // Tambahkan ikon keranjang
+                const cartIcon = document.createElement("div");
+                cartIcon.classList.add("cart-icon");
+                cartIcon.innerHTML = `
+        <svg width="37" height="37" viewBox="0 0 37 37" fill="none">
+          <path
+            d="M26.1846 29.4843C28.2198 29.4843 29.8846 31.1751 29.8846 33.2422C29.8846 35.3092 28.2198 37 26.1846 37C24.1494 37 22.4845 35.3092 22.4845 33.2422C22.4846 31.175 24.1495 29.4843 26.1846 29.4843ZM37 0V3.7578H33.3L26.6397 17.4595L29.4243 22.0623C29.7017 22.532 29.8868 23.1898 29.8868 23.8477C29.8868 26.3634 28.1947 27.6055 25.9 27.6055H4.26923V23.9922H25.447C25.7243 23.9922 25.9095 23.8041 25.9095 23.5225C25.9095 23.4289 25.7132 23.0528 25.7132 23.0528L23.8648 20.0899H10.0829C8.69527 20.0899 7.49214 19.3386 6.84536 18.1174L0.185179 6.48266C0.0751577 6.26036 1.43051e-06 5.91845 1.43051e-06 5.5433C1.43051e-06 4.50936 0.832856 3.75789 1.85 3.75789H29.2296L30.9875 0H37ZM7.96932 29.4843C10.0045 29.4843 11.6693 31.1751 11.6693 33.2422C11.6693 35.3092 10.0045 37 7.96932 37C5.93414 37 4.26923 35.3091 4.26923 33.2421C4.26923 31.175 5.93414 29.4843 7.96932 29.4843Z"
+            fill="#27C100"
+          />
+        </svg>
+      `;
+                authButtons.appendChild(cartIcon);
+
+                // Tambahkan nama pengguna
+                const displayName = user.name.split("@")[0];
+                const nameSpan = document.createElement("span");
+                nameSpan.textContent = displayName;
+                nameSpan.style.margin = "0 10px";
+                nameSpan.style.fontWeight = "500";
+                nameSpan.style.color = "#4C5A49";
+                authButtons.appendChild(nameSpan);
+
+                // Tambahkan icon profil
+                const profileIcon = document.createElement("img");
+                profileIcon.src = "asset/Beranda/logo_user.png"; // ✅ PASTIKAN PATH & EKSTENSI
+                profileIcon.alt = "User Icon";
+                profileIcon.style.width = "32px";
+                profileIcon.style.height = "32px";
+                profileIcon.style.borderRadius = "50%";
+                profileIcon.style.objectFit = "cover";
+                profileIcon.style.cursor = "pointer";
+                authButtons.appendChild(profileIcon);
+
+            }
+        });
+    </script>
+
+</body>
+
+</html>

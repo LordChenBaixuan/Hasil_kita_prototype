@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HasilKita - Keranjang Belanja</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Cairo:wght@300;400;500;600;700&family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Bellota+Text:wght@300;400;700&family=Expletus+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="keranjang.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-left">
+        <h1 class="brand-title">HasilKita</h1>
+        <div class="brand-divider"></div>
+        <h2 class="page-title">Keranjang</h2>
+      </div>
+
+      <div class="cart-icon">
+        <!-- Shopping Cart SVG -->
+        <svg
+          width="37"
+          height="37"
+          viewBox="0 0 37 37"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M26.1846 29.4843C28.2198 29.4843 29.8846 31.1751 29.8846 33.2422C29.8846 35.3092 28.2198 37 26.1846 37C24.1494 37 22.4845 35.3092 22.4845 33.2422C22.4846 31.175 24.1495 29.4843 26.1846 29.4843ZM37 0V3.7578H33.3L26.6397 17.4595L29.4243 22.0623C29.7017 22.532 29.8868 23.1898 29.8868 23.8477C29.8868 26.3634 28.1947 27.6055 25.9 27.6055H4.26923V23.9922H25.447C25.7243 23.9922 25.9095 23.8041 25.9095 23.5225C25.9095 23.4289 25.7132 23.0528 25.7132 23.0528L23.8648 20.0899H10.0829C8.69527 20.0899 7.49214 19.3386 6.84536 18.1174L0.185181 6.48266C0.0751572 6.26036 0 5.91845 0 5.5433C0 4.50936 0.832855 3.75789 1.85 3.75789H29.2296L30.9875 0H37ZM7.96932 29.4843C10.0045 29.4843 11.6693 31.1751 11.6693 33.2422C11.6693 35.3092 10.0045 37 7.96932 37C5.93414 37 4.26923 35.3091 4.26923 33.2421C4.26923 31.175 5.93414 29.4843 7.96932 29.4843Z"
+            fill="#27C100"
+          />
+        </svg>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Back Button -->
+      <button class="back-button" onclick="goBack()">< Kembali</button>
+
+      <!-- Divider Line -->
+      <div class="divider-line"></div>
+
+      <!-- Cart Items Container -->
+      <div class="cart-items-container" id="cartItemsContainer">
+        <!-- Cart items will be dynamically inserted here -->
+      </div>
+
+      <!-- Empty Cart Message (hidden by default) -->
+      <div class="empty-cart" id="emptyCart" style="display: none">
+        <p>Keranjang Anda kosong</p>
+        <button class="btn-shop" onclick="goToShop()">Mulai Belanja</button>
+      </div>
+    </main>
+
+    <!-- Cart Summary -->
+    <div class="cart-summary">
+      <div class="summary-left">
+        <div class="select-all-container">
+          <input
+            type="checkbox"
+            id="selectAllCheckbox"
+            class="cart-checkbox"
+            onchange="toggleSelectAll()"
+          />
+          <label for="selectAllCheckbox">Pilih Semua</label>
+        </div>
+        <button class="btn-delete" onclick="deleteSelected()">Hapus</button>
+      </div>
+
+      <div class="summary-right">
+        <div class="total-info">
+          <span class="total-label" id="totalLabel">Total (0 produk):</span>
+          <span class="total-price" id="totalPrice">Rp. 0</span>
+        </div>
+        <button class="btn-checkout" onclick="checkout()">Checkout</button>
+      </div>
+    </div>
+
+   <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-grid">
+            <!-- Company Info -->
+            <div class="footer-section">
+              <h3 class="footer-brand">HasilKita</h3>
+              <p class="footer-description">
+                Kami sebagai supplier produk hasil pertanian berkualitas
+                langsung dari petani Indonesia ke tangan anda. Dengan kerjasama
+                yang kami lakukan maka kami pastikan produk kami dapat
+                mengimbangi produk populer lainnya.
+              </p>
+            </div>
+
+            <!-- Categories -->
+            <div class="footer-section">
+              <h4 class="footer-title">Kategori</h4>
+              <ul class="footer-list">
+                <li class="footer-item">
+                  <svg
+                    class="footer-icon"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <polygon
+                      points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"
+                    ></polygon>
+                  </svg>
+                  <span class="footer-text">Sayur - Sayuran</span>
+                </li>
+                <li class="footer-item">
+                  <svg
+                    class="footer-icon"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <polygon
+                      points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"
+                    ></polygon>
+                  </svg>
+                  <span class="footer-text">Buah - Buahan</span>
+                </li>
+                <li class="footer-item">
+                  <svg
+                    class="footer-icon"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <polygon
+                      points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"
+                    ></polygon>
+                  </svg>
+                  <span class="footer-text">Bibit Unggul</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-section">
+              <h4 class="footer-title">Kontak Kami</h4>
+              <ul class="footer-list">
+                <li class="footer-item">
+                  <svg
+                    class="footer-icon"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <polygon
+                      points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"
+                    ></polygon>
+                  </svg>
+                  <span class="footer-text">08xx-xxxx-xxxx</span>
+                </li>
+                <li class="footer-item">
+                  <svg
+                    class="footer-icon"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <polygon
+                      points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"
+                    ></polygon>
+                  </svg>
+                  <span class="footer-text">hasilkita_id@gmail.com</span>
+                </li>
+                <li class="footer-item">
+                  <svg
+                    class="footer-icon"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <polygon
+                      points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"
+                    ></polygon>
+                  </svg>
+                  <span class="footer-text">@HasilKita.id</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="../js/keranjang.js"></script>
+  </body>
+</html>

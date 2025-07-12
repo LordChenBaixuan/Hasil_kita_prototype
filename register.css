@@ -1,0 +1,377 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #f5f5f5;
+  line-height: 1.6;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.register-page {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow:
+    555px 868px 288px 0px rgba(0, 0, 0, 0),
+    355px 556px 264px 0px rgba(0, 0, 0, 0.01),
+    200px 312px 223px 0px rgba(0, 0, 0, 0.05),
+    89px 139px 165px 0px rgba(0, 0, 0, 0.09),
+    22px 35px 91px 0px rgba(0, 0, 0, 0.1);
+}
+
+.background-gradient {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    103.88% 58.43% at 56.74% 50%,
+    #67c900 0%,
+    #494949 100%
+  );
+  z-index: 1;
+}
+
+.background-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.form-container {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.register-form {
+  width: 469px;
+  height: 629px;
+  padding: 47px 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 16px;
+  border: 2.13px solid rgba(88, 130, 193, 0.49);
+  background: rgba(117, 148, 194, 0.28);
+  backdrop-filter: blur(8.895px);
+  -webkit-backdrop-filter: blur(8.895px);
+}
+
+.brand-name {
+  color: #187600;
+  font-family: "Caveat", cursive;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+
+.form-title {
+  align-self: stretch;
+  color: #000;
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+}
+
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.social-button {
+  display: flex;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid #e7e7e7;
+  background: #fff;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.social-button:hover {
+  background: #f8f9fa;
+  border-color: #d1d5db;
+}
+
+.button-text {
+  color: #000;
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.social-icon {
+  position: absolute;
+  left: 16px;
+  top: 15px;
+  width: 18px;
+  height: 18px;
+}
+
+.or-divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  opacity: 0.5;
+}
+
+.border-line {
+  height: 1px;
+  flex: 1 0 0;
+  opacity: 0.2;
+  background: #000;
+}
+
+.or-text {
+  color: #000;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  align-self: stretch;
+}
+
+.input-label {
+  color: #000;
+  font-family: "Outfit", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.input-container {
+  display: flex;
+  padding: 13px 16px;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid #e7e7e7;
+  background: #fff;
+  position: relative;
+}
+
+.form-input {
+  color: #000;
+  font-family: "Outfit", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.75;
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+}
+
+.password-container {
+  padding: 15px 16px;
+  height: 44px;
+}
+
+.password-input {
+  opacity: 1;
+}
+
+.password-dots {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  opacity: 0.75;
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: #000;
+  border-radius: 50%;
+}
+
+.eye-icon {
+  color: #808080;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  opacity: 0.5;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 14px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.create-account-btn {
+  display: flex;
+  height: 48px;
+  padding: 0px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+  border-radius: 8px;
+  background: #000;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.create-account-btn:hover {
+  background: #333;
+}
+
+.create-account-btn {
+  color: #fff;
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.login-link {
+  align-self: stretch;
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+}
+
+.normal-text {
+  color: #fff;
+  font-weight: 400;
+}
+
+.link-text {
+  color: #0c0c9f;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link-text:hover {
+  color: #080875;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .register-form {
+    width: 90%;
+    max-width: 400px;
+    padding: 30px 40px;
+    height: auto;
+    min-height: 500px;
+  }
+
+  .brand-name {
+    font-size: 32px;
+  }
+
+  .form-title {
+    font-size: 20px;
+  }
+
+  .button-text {
+    font-size: 14px;
+  }
+
+  .social-icon {
+    left: 12px;
+    top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    padding: 10px;
+  }
+
+  .register-form {
+    padding: 25px 30px;
+    gap: 15px;
+  }
+
+  .brand-name {
+    font-size: 28px;
+  }
+
+  .form-title {
+    font-size: 18px;
+  }
+
+  .social-button {
+    height: 44px;
+  }
+
+  .button-text {
+    font-size: 13px;
+  }
+}

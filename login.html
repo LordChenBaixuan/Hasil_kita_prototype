@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HasilKita - Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400&family=Gilroy:wght@300;400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <!-- Background with radial gradient -->
+      <div class="background-gradient"></div>
+
+      <!-- Background image -->
+      <img
+        src="asset/Login dan Register/background_login.jpg"
+        alt="Farm workers in greenhouse"
+        class="background-image"
+      />
+      <!-- Login form container -->
+      <div class="form-container">
+        <div class="login-form">
+          <!-- Brand name -->
+          <h1 class="brand-name">HasilKita</h1>
+
+          <!-- Login form -->
+          <div class="form-content">
+            <!-- Login title -->
+            <h2 class="login-title">Login</h2>
+
+            <!-- Form fields -->
+            <form id="login-form"class="form-fields" method="post">
+              <!-- Email field -->
+              <div class="field-group">
+                <label class="field-label">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="username"
+                  placeholder="username@gmail.com"
+                  class="field-input"
+                />
+              </div>
+
+              <!-- Password field -->
+              <div class="field-group">
+                <label class="field-label">Password</label>
+                <div class="password-container">
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Password"
+                    class="field-input password-input"
+                  
+                  />
+                  <button
+                    type="button"
+                    class="password-toggle"
+                    onclick="togglePassword()"
+                  >
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="eye-icon"
+                    >
+                      <g clipPath="url(#clip0_3311_1021)">
+                        <path
+                          d="M8.08185 6.93128C8.17266 6.68861 8.21872 6.43149 8.21782 6.17239C8.21782 5.5971 7.98928 5.04536 7.58248 4.63857C7.17569 4.23177 6.62395 4.00323 6.04866 4.00323C5.79275 4.00353 5.53896 4.04958 5.29926 4.1392L5.80834 4.6641C5.88573 4.65172 5.96396 4.64538 6.04233 4.64513C6.44911 4.64428 6.8397 4.80441 7.12881 5.09056C7.41792 5.37671 7.58207 5.76563 7.58541 6.17239C7.58515 6.25076 7.5788 6.32899 7.56644 6.40638L8.08185 6.93128Z"
+                          fill="#C7D2D6"
+                        />
+                        <path
+                          d="M10.9593 6.02376C9.89369 4.05381 8.02493 2.86172 5.95696 2.86172C5.39391 2.86305 4.83464 2.95377 4.30005 3.1305L4.80914 3.64275C5.18411 3.54584 5.56967 3.49592 5.95696 3.49413C7.73718 3.49413 9.35615 4.48701 10.3206 6.15973C9.96678 6.78031 9.49779 7.32766 8.93876 7.77237L9.38777 8.22138C10.0347 7.69943 10.5721 7.05465 10.9688 6.32416L11.051 6.17238L10.9593 6.02376Z"
+                          fill="#C7D2D6"
+                        />
+                        <path
+                          d="M1.65661 2.30836L3.06688 3.71863C2.17547 4.29258 1.44694 5.08645 0.951476 6.02376L0.869263 6.17237L0.951476 6.32415C2.01708 8.2941 3.88584 9.48619 5.95382 9.48619C6.76098 9.48602 7.55765 9.30334 8.28424 8.9518L9.86526 10.5328L10.4186 10.0585L2.19732 1.83722L1.65661 2.30836ZM4.7396 5.39135L6.84235 7.4941C6.60476 7.64116 6.33125 7.71994 6.05184 7.72177C5.84882 7.72177 5.64779 7.68163 5.46034 7.60365C5.27289 7.52567 5.10271 7.41139 4.95959 7.26739C4.81647 7.12339 4.70324 6.95251 4.62641 6.76458C4.54959 6.57666 4.51068 6.37539 4.51193 6.17237C4.51549 5.89619 4.5942 5.62619 4.7396 5.39135ZM4.2811 4.93285C3.98527 5.35005 3.84661 5.85847 3.88968 6.3681C3.93274 6.87772 4.15475 7.35567 4.51639 7.71731C4.87803 8.07895 5.35598 8.30096 5.8656 8.34402C6.37522 8.38709 6.88365 8.24843 7.30085 7.9526L7.80677 8.45852C7.22109 8.70887 6.59076 8.83795 5.95382 8.83797C4.17359 8.83797 2.55463 7.84509 1.59021 6.17237C2.05304 5.35284 2.7196 4.66667 3.52537 4.18029L4.2811 4.93285Z"
+                          fill="#C7D2D6"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_3311_1021">
+                          <rect
+                            x="0.116699"
+                            y="0.480713"
+                            width="11.3833"
+                            height="11.3833"
+                            rx="5.69167"
+                            fill="white"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Forgot password link -->
+              <div class="forgot-password">
+                <a href="#" class="forgot-link">Lupa Sandi?</a>
+              </div>
+
+              <!-- Login button -->
+              <button type="submit" class="login-button">masuk</button>
+
+              <!-- Continue with text -->
+              <p class="continue-text">Lanjutkan Dengan</p>
+
+              <!-- Social login buttons -->
+              <div class="social-buttons">
+                <button type="button" class="social-button">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/629ac1817ad407ca306c15b72b0f44b11c6af195?width=34"
+                    alt="Google"
+                    class="social-icon"
+                  />
+                </button>
+                <button type="button" class="social-button">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e07305118e01959168b6d5fb805ec3a21a4938d?width=34"
+                    alt="Facebook"
+                    class="social-icon"
+                  />
+                </button>
+              </div>
+
+              <!-- Sign up link -->
+              <p class="signup-text">
+                <span>Belum punya akun? </span>
+                <a href="register.html" class="signup-link">Daftar gratis</a>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function togglePassword() {
+        const passwordField = document.getElementById("password");
+        const type =
+          passwordField.getAttribute("type") === "password"
+            ? "text"
+            : "password";
+        passwordField.setAttribute("type", type);
+      }
+    </script>
+
+    <script>
+  document.getElementById("login-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  if (username === "admin@gmail.com" && password === "12345") {
+    // Simpan status login ke localStorage
+    localStorage.setItem("isLoggedIn", "true");
+    localStorage.setItem("user", JSON.stringify({ name: username }));
+
+    window.location.href = "afterlogin.html";
+  } else {
+    alert("Email atau password salah.");
+  }
+});
+</script>
+
+  </body>
+</html>

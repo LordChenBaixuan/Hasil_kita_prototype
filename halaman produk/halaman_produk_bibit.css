@@ -1,0 +1,911 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #f5f5f5;
+  color: #000;
+  line-height: 1.6;
+}
+
+/* CSS Variables for Colors */
+:root {
+  --hasilkita-green: #187600;
+  --hasilkita-bright-green: #27c100;
+  --hasilkita-light-green: #239b04;
+  --hasilkita-gray: #f5f5f5;
+  --hasilkita-dark-gray: #d9d9d9;
+  --hasilkita-text-gray: #c3bebe;
+  --hasilkita-brown: #8f8759;
+  --hasilkita-red-brown: #bd5337;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  background-color: var(--hasilkita-gray);
+}
+
+@media (min-width: 640px) {
+  .header {
+    padding: 1rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    padding: 1.5rem 3.5rem;
+  }
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.brand-title {
+  font-family: "Caveat", cursive;
+  font-size: 1.875rem;
+  color: var(--hasilkita-green);
+  margin-right: 0.75rem;
+  font-weight: 400;
+}
+
+@media (min-width: 640px) {
+  .brand-title {
+    font-size: 2.25rem;
+    margin-right: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .brand-title {
+    font-size: 3rem;
+    margin-right: 1.5rem;
+  }
+}
+
+.brand-divider {
+  width: 2px;
+  height: 3rem;
+  background-color: var(--hasilkita-green);
+}
+
+@media (min-width: 640px) {
+  .brand-divider {
+    height: 3.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .brand-divider {
+    height: 4rem;
+  }
+}
+
+/* Navigation Styles */
+.nav-desktop {
+  display: none;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .nav-desktop {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.nav-mobile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .nav-mobile {
+    display: none;
+  }
+}
+
+.nav-link {
+  font-family: "Cairo", sans-serif;
+  font-size: 1.125rem;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+@media (min-width: 1024px) {
+  .nav-link {
+    font-size: 1.25rem;
+  }
+}
+
+.nav-link-mobile {
+  font-family: "Cairo", sans-serif;
+  font-size: 0.875rem;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.nav-sayur {
+  color: var(--hasilkita-green);
+}
+
+.nav-buah {
+  color: var(--hasilkita-brown);
+}
+
+.nav-bibit {
+  color: var(--hasilkita-red-brown);
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-icon svg {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+@media (min-width: 640px) {
+  .cart-icon svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cart-icon svg {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+}
+
+/* Main Content Styles */
+.main-content {
+  padding: 1rem 1rem;
+}
+
+@media (min-width: 640px) {
+  .main-content {
+    padding: 1rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-content {
+    padding: 2rem 3.5rem;
+  }
+}
+
+.back-button {
+  font-family: "Cairo", sans-serif;
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #000;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  transition: color 0.2s;
+}
+
+@media (min-width: 640px) {
+  .back-button {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .back-button {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.back-button:hover {
+  color: var(--hasilkita-green);
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .product-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+
+/* Product Image */
+.product-image-container {
+  position: relative;
+}
+
+.image-wrapper {
+  position: relative;
+  background-color: var(--hasilkita-dark-gray);
+  border-radius: 3px;
+  padding: 2rem;
+  height: 19rem;
+  width: 100%;
+  max-width: 24rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.new-badge {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  background-color: #f00;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2px;
+}
+
+.new-badge span {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+/* Product Info Container */
+.product-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .product-info-container {
+    gap: 2rem;
+  }
+}
+
+/* Basic Info Section */
+.basic-info-section {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1024px) {
+  .basic-info-section {
+    padding: 1.5rem;
+  }
+}
+
+.product-details {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .product-details {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.product-title {
+  font-family: "Cairo", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--hasilkita-green);
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .product-title {
+    font-size: 1.875rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .product-title {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.product-price {
+  font-family: "Cairo", sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .product-price {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .product-price {
+    font-size: 1.875rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .rating-container {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.star-icon {
+  width: 1rem;
+  height: 1rem;
+  fill: var(--hasilkita-text-gray);
+}
+
+.rating-text {
+  font-family: "Cairo", sans-serif;
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: var(--hasilkita-text-gray);
+}
+
+@media (min-width: 1024px) {
+  .rating-text {
+    font-size: 1.25rem;
+  }
+}
+
+/* Quantity Control */
+.quantity-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .quantity-container {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  background-color: var(--hasilkita-dark-gray);
+  border-radius: 9999px;
+  padding: 0.25rem 0.5rem;
+}
+
+.quantity-btn {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.decrease-btn {
+  background-color: transparent;
+  border: 2px solid #9ca3af;
+}
+
+.decrease-btn:hover {
+  border-color: #6b7280;
+}
+
+.increase-btn {
+  background-color: var(--hasilkita-bright-green);
+}
+
+.increase-btn:hover {
+  background-color: var(--hasilkita-green);
+}
+
+.quantity-display {
+  margin: 0 1rem;
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .action-buttons {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .action-buttons {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.btn-primary {
+  background-color: var(--hasilkita-bright-green);
+  color: white;
+  font-family: "Cairo", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+@media (min-width: 1024px) {
+  .btn-primary {
+    font-size: 1.25rem;
+    padding: 0.75rem 2rem;
+  }
+}
+
+.btn-primary:hover {
+  background-color: var(--hasilkita-green);
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #000;
+  font-family: "Cairo", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--hasilkita-bright-green);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+@media (min-width: 1024px) {
+  .btn-secondary {
+    font-size: 1.25rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+.btn-secondary:hover {
+  background-color: var(--hasilkita-bright-green);
+  color: white;
+}
+
+.btn-message {
+  background-color: var(--hasilkita-bright-green);
+  color: white;
+  font-family: "Cairo", sans-serif;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  align-self: flex-start;
+}
+
+.btn-message:hover {
+  background-color: var(--hasilkita-green);
+}
+
+/* Description Section */
+.description-section {
+  background-color: var(--hasilkita-dark-gray);
+  padding: 1rem;
+  border-radius: 2px;
+}
+
+@media (min-width: 1024px) {
+  .description-section {
+    padding: 1.5rem;
+  }
+}
+
+.description-title {
+  font-family: "Cairo", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.description-text {
+  font-family: "Cairo", sans-serif;
+  font-size: 0.75rem;
+  color: #000;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+/* Reviews Section */
+.reviews-section {
+  background-color: var(--hasilkita-dark-gray);
+  padding: 1.5rem;
+  border-radius: 2px;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .reviews-section {
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.reviews-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.reviews-title {
+  font-family: "Cairo", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+}
+
+@media (min-width: 1024px) {
+  .reviews-title {
+    font-size: 1.875rem;
+  }
+}
+
+.reviews-star {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: var(--hasilkita-bright-green);
+}
+
+@media (min-width: 1024px) {
+  .reviews-star {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.reviews-count {
+  font-family: "Cairo", sans-serif;
+  font-size: 1.25rem;
+  color: #000;
+}
+
+@media (min-width: 1024px) {
+  .reviews-count {
+    font-size: 1.5rem;
+  }
+}
+
+.reviews-content {
+  height: 8rem;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: black;
+  margin-top: 3rem;
+  box-shadow:
+    0 -4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 -2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    margin-top: 5rem;
+  }
+}
+
+.footer-content {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .footer-content {
+    padding: 4rem 4rem;
+  }
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-grid {
+    gap: 4rem;
+  }
+}
+
+.footer-brand {
+  font-family: "Caveat", cursive;
+  font-size: 1.875rem;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 1.5rem;
+  text-shadow:
+    -1px -1px 0 #187600,
+    1px -1px 0 #187600,
+    -1px 1px 0 #187600,
+    1px 1px 0 #187600;
+}
+
+@media (min-width: 1024px) {
+  .footer-brand {
+    font-size: 2.25rem;
+  }
+}
+
+.footer-description {
+  font-family: "Bellota Text", cursive;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1.625;
+}
+
+@media (min-width: 1024px) {
+  .footer-description {
+    font-size: 1rem;
+  }
+}
+
+.footer-title {
+  font-family: "Cairo", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 1.5rem;
+  text-shadow:
+    -0.5px -0.5px 0 #187600,
+    0.5px -0.5px 0 #187600,
+    -0.5px 0.5px 0 #187600,
+    0.5px 0.5px 0 #187600;
+}
+
+@media (min-width: 1024px) {
+  .footer-title {
+    font-size: 1.5rem;
+  }
+}
+
+.footer-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-icon {
+  width: 1rem;
+  height: 1rem;
+  color: white;
+  stroke: #187600;
+  stroke-width: 2;
+}
+
+.footer-text {
+  font-family: "Cairo", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: white;
+  text-shadow:
+    -0.5px -0.5px 0 #187600,
+    0.5px -0.5px 0 #187600,
+    -0.5px 0.5px 0 #187600,
+    0.5px 0.5px 0 #187600;
+}
+
+@media (min-width: 1024px) {
+  .footer-text {
+    font-size: 1rem;
+  }
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modal.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  width: 20rem;
+  height: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: scaleIn 0.3s ease-out;
+}
+
+@media (min-width: 640px) {
+  .modal-content {
+    width: 24rem;
+    height: 20rem;
+  }
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+@media (min-width: 640px) {
+  .modal-body {
+    gap: 1.5rem;
+  }
+}
+
+.success-icon {
+  width: 8rem;
+  height: 8rem;
+  background-color: var(--hasilkita-bright-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 0.5s ease;
+}
+
+@media (min-width: 640px) {
+  .success-icon {
+    width: 7rem;
+    height: 7rem;
+  }
+}
+
+.success-icon svg {
+  width: 100%;  /* Nilai asli, tapi akan di-scale */
+  height: 100%;
+  stroke: white;
+  stroke-width: 4;
+  transform: scale(1.5); /* Trik scaling */
+  transform-origin: center;
+  filter: 
+    drop-shadow(0 0 2px rgba(0,0,0,0.3)) /* Efek bayangan */
+    contrast(1.2);
+}
+
+@media (min-width: 640px) {
+  .success-icon svg {
+    width: 10rem;
+    height: 10rem;
+  }
+  .success-icon svg {
+    stroke-width: 5;
+    transform: scale(2);
+  }
+}
+
+.success-message {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--hasilkita-light-green);
+  text-align: center;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .success-message {
+    font-size: 1.5rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Utilities */
+@media (max-width: 639px) {
+  .mobile-only {
+    display: block;
+  }
+  .desktop-only {
+    display: none;
+  }
+}
+
+@media (min-width: 640px) {
+  .mobile-only {
+    display: none;
+  }
+  .desktop-only {
+    display: block;
+  }
+}

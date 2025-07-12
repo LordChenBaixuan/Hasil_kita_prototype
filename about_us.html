@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HasilKita - Tentang Kami</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Expletus+Sans:wght@400;700&family=Cairo:wght@200;300;400;600;700;900&family=Bellota+Text:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --hasil-green: #187600;
+        --hasil-light-green: #27c100;
+        --card-bg: #d9d9d9;
+        --page-bg: #f5f5f5;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Cairo", sans-serif;
+        background-color: var(--page-bg);
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      @media (min-width: 768px) {
+        .container {
+          padding: 0 2rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .container {
+          padding: 0 4rem;
+        }
+      }
+
+      /* Header */
+      header {
+        background-color: var(--page-bg);
+        padding: 1rem 0;
+      }
+
+      .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .header-left {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      @media (min-width: 768px) {
+        .header-left {
+          gap: 2rem;
+        }
+      }
+
+      .logo {
+        font-family: "Caveat", cursive;
+        color: var(--hasil-green);
+        font-size: 2rem;
+        font-weight: 400;
+        text-decoration: none;
+      }
+
+      @media (min-width: 768px) {
+        .logo {
+          font-size: 3rem;
+        }
+      }
+
+      .separator {
+        display: none;
+        width: 2px;
+        height: 4rem;
+        background-color: var(--hasil-green);
+      }
+
+      @media (min-width: 768px) {
+        .separator {
+          display: block;
+        }
+      }
+
+      .page-title {
+        font-family: "Expletus Sans", sans-serif;
+        color: var(--hasil-green);
+        font-size: 1.25rem;
+        font-weight: 400;
+      }
+
+      @media (min-width: 768px) {
+        .page-title {
+          font-size: 2.25rem;
+        }
+      }
+
+      .cart-btn {
+        background: none;
+        border: none;
+        color: var(--hasil-light-green);
+        cursor: pointer;
+        transition: color 0.3s;
+      }
+
+      .cart-btn:hover {
+        color: var(--hasil-green);
+      }
+
+      .cart-icon {
+        width: 2rem;
+        height: 2rem;
+      }
+
+      @media (min-width: 768px) {
+        .cart-icon {
+          width: 2.5rem;
+          height: 2.5rem;
+        }
+      }
+
+      /* Separator Line */
+      .divider {
+        width: 100%;
+        height: 2px;
+        background-color: var(--hasil-green);
+      }
+
+      /* Back Link */
+      .back-section {
+        padding: 1.5rem 0;
+      }
+
+      .back-btn {
+        background: none;
+        border: none;
+        font-family: "Cairo", sans-serif;
+        color: black;
+        font-size: 1.25rem;
+        font-weight: 700;
+        text-decoration: underline;
+        cursor: pointer;
+        transition: color 0.3s;
+      }
+
+      @media (min-width: 768px) {
+        .back-btn {
+          font-size: 1.5rem;
+        }
+      }
+
+      .back-btn:hover {
+        color: var(--hasil-green);
+      }
+
+      /* Main Content */
+      main {
+        padding: 2rem 0;
+      }
+
+      @media (min-width: 768px) {
+        main {
+          padding: 3rem 0;
+        }
+      }
+
+      .main-title {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      @media (min-width: 768px) {
+        .main-title {
+          margin-bottom: 4rem;
+        }
+      }
+
+      .main-title h2 {
+        font-family: "Cairo", sans-serif;
+        color: var(--hasil-green);
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      @media (min-width: 768px) {
+        .main-title h2 {
+          font-size: 2.25rem;
+        }
+      }
+
+      /* Cards */
+      .cards-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        max-width: 1152px;
+        margin: 0 auto;
+      }
+
+      @media (min-width: 1024px) {
+        .cards-container {
+          grid-template-columns: 1fr 1fr;
+          gap: 3rem;
+        }
+      }
+
+      .card {
+        background-color: var(--card-bg);
+        border-radius: 77px;
+        padding: 2rem;
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      @media (min-width: 768px) {
+        .card {
+          padding: 3rem;
+          min-height: 426px;
+        }
+      }
+
+      .card h3 {
+        font-family: "Cairo", sans-serif;
+        color: var(--hasil-green);
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+
+      .card.visi h3 {
+        margin: -93px 0 32px;
+      }
+
+      .card.misi h3 {
+        margin-bottom: 25px;
+      }
+
+      @media (min-width: 768px) {
+        .card h3 {
+          font-size: 2.25rem;
+          margin-bottom: 2rem;
+        }
+
+        .card.visi h3 {
+          margin: -93px 0 32px;
+        }
+
+        .card.misi h3 {
+          margin-bottom: 25px;
+        }
+      }
+
+      .card p,
+      .mission-text {
+        font-family: "Cairo", sans-serif;
+        color: black;
+        font-size: 1.125rem;
+        line-height: 1.6;
+        text-align: center;
+        padding: 0 1rem;
+      }
+
+      .card.visi p {
+        align-self: stretch;
+      }
+
+      @media (min-width: 768px) {
+        .card p,
+        .mission-text {
+          font-size: 1.25rem;
+        }
+      }
+
+      .mission-content {
+        font-family: "Cairo", sans-serif;
+        color: black;
+        font-size: 1.125rem;
+        line-height: 1.6;
+        padding: 0 1rem;
+      }
+
+      @media (min-width: 768px) {
+        .mission-content {
+          font-size: 1.25rem;
+        }
+      }
+
+      .mission-item {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .mission-number {
+        font-weight: 700;
+      }
+
+      /* Footer */
+      footer {
+        background-color: black;
+        border-radius: 0.5rem 0.5rem 0 0;
+        margin-top: 4rem;
+        box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
+      }
+
+      @media (min-width: 768px) {
+        footer {
+          margin-top: 6rem;
+        }
+      }
+
+      .footer-content {
+        padding: 2rem 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      @media (min-width: 768px) {
+        .footer-content {
+          padding: 3rem 0;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 3rem;
+        }
+      }
+
+      .footer-section {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .footer-title {
+        font-family: "Caveat", cursive;
+        color: white;
+        font-size: 2rem;
+        font-weight: 400;
+        -webkit-text-stroke: 0.5px var(--hasil-green);
+        text-shadow: 0 0 0 var(--hasil-green);
+        
+      }
+
+      @media (min-width: 768px) {
+        .footer-title {
+          font-size: 2.25rem;
+        }
+      }
+
+      .footer-description {
+        font-family: "Bellota Text", cursive;
+        color: white;
+        font-size: 0.875rem;
+        line-height: 1.6;
+        font-weight: 700;
+      }
+
+      @media (min-width: 768px) {
+        .footer-description {
+          font-size: 1rem;
+        }
+      }
+
+      .footer-category-title,
+      .footer-contact-title {
+        font-family: "Cairo", sans-serif;
+        color: white;
+        font-size: 1.25rem;
+        font-weight: 400;
+        -webkit-text-stroke: 0.5px var(--hasil-green);
+      }
+
+      @media (min-width: 768px) {
+        .footer-category-title,
+        .footer-contact-title {
+          font-size: 1.5rem;
+        }
+      }
+
+      .footer-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .footer-item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .footer-icon {
+        width: 1rem;
+        height: 1rem;
+        fill: white;
+        stroke: var(--hasil-green);
+        stroke-width: 2;
+      }
+
+      .footer-item-text {
+        font-family: "Cairo", sans-serif;
+        color: white;
+        font-size: 0.875rem;
+        -webkit-text-stroke: 0.5px var(--hasil-green);
+      }
+
+      @media (min-width: 768px) {
+        .footer-item-text {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <div class="header-left">
+            <a href="#" class="logo">HasilKita</a>
+            <div class="separator"></div>
+            <h2 class="page-title">Tentang Kami</h2>
+          </div>
+          <button class="cart-btn">
+            <svg
+              class="cart-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.1 5a2 2 0 002 2h9.2a2 2 0 002-2L17 13M7 13v0a2 2 0 002-2v0M7 13v0M16 13v0a2 2 0 012 2v0M16 13v0"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Separator Line -->
+    <div class="divider"></div>
+
+    <!-- Back Link -->
+    <div class="back-section">
+      <div class="container">
+        <a href="index.html" class="back-btn">&lt; Kembali</a>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+      <div class="container">
+        <!-- Visi dan Misi Title -->
+        <div class="main-title">
+          <h2>Visi dan Misi</h2>
+        </div>
+
+        <!-- Visi and Misi Cards -->
+        <div class="cards-container">
+          <!-- Visi Card -->
+          <div class="card visi">
+            <h3>Visi</h3>
+            <p>
+              Mewujudkan ekosistem pertanian digital yang adil, berkelanjutan,
+              dan memberdayakan petani Indonesia melalui akses pasar yang lebih
+              luas dan transparan.
+            </p>
+          </div>
+
+          <!-- Misi Card -->
+          <div class="card misi">
+            <h3>Misi</h3>
+            <div class="mission-content">
+              <div class="mission-item">
+                <span class="mission-number">1.</span>
+                <p class="mission-text">
+                  Memberdayakan petani lokal dengan menyediakan platform digital
+                  untuk menjual hasil pertanian secara langsung ke konsumen.
+                </p>
+              </div>
+              <div class="mission-item">
+                <span class="mission-number">2.</span>
+                <p class="mission-text">
+                  Meningkatkan kesadaran masyarakat akan pentingnya mendukung
+                  hasil pertanian dalam negeri dan konsums produk lokal.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <!-- Company Info -->
+          <div class="footer-section">
+            <h3 class="footer-title">HasilKita</h3>
+            <p class="footer-description">
+              Kami sebagai supplier produk hasil pertanian berkualitas langsung
+              dari petani Indonesia ke tangan anda. Dengan kerjasama yang kami
+              lakukan maka kami pastikan produk kami dapat mengimbangi produk
+              populer lainnya.
+            </p>
+          </div>
+
+          <!-- Categories -->
+          <div class="footer-section">
+            <h4 class="footer-category-title">Kategori</h4>
+            <div class="footer-list">
+              <div class="footer-item">
+                <svg
+                  class="footer-icon"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.0225 1C10.3469 1.00388 10.6627 1.09017 10.9424 1.24707L11.0596 1.31836L11.1719 1.39746C11.4256 1.59107 11.6271 1.8434 11.7627 2.12988L11.7637 2.13086L13.4883 5.7832L17.3291 6.36621C17.6529 6.41532 17.9561 6.54541 18.2129 6.74121L18.3203 6.8291L18.4209 6.9248C18.6468 7.15379 18.8132 7.43403 18.9082 7.73926C19.0167 8.08801 19.0291 8.46026 18.9453 8.81543C18.8719 9.12651 18.7262 9.41769 18.5176 9.66211L18.4248 9.76367L15.6182 12.6221L16.2852 16.6611L16.3027 16.7969C16.334 17.114 16.2905 17.4355 16.1748 17.7344C16.0425 18.076 15.8196 18.3788 15.5244 18.6035C15.2286 18.8286 14.8732 18.9658 14.499 18.9941C14.1248 19.0225 13.7526 18.9405 13.4258 18.7607V18.7598L10.002 16.8789L6.57715 18.7627L6.5752 18.7637C6.24895 18.9418 5.87773 19.0228 5.50488 18.9941C5.13242 18.9654 4.77912 18.8292 4.48438 18.6055C4.18994 18.3819 3.96583 18.0803 3.83301 17.7402C3.70044 17.4006 3.66173 17.0309 3.71973 16.6719L3.7207 16.6699L4.38281 12.623L1.58008 9.77051C1.32049 9.50738 1.14033 9.17892 1.05566 8.82324C0.971038 8.46768 0.983565 8.09453 1.0918 7.74512C1.2001 7.39572 1.40109 7.07882 1.67871 6.83398L1.78613 6.74609C2.0432 6.54982 2.34657 6.4193 2.6709 6.37012L6.50977 5.78516L8.2373 2.13184C8.39504 1.79761 8.64298 1.51025 8.95801 1.30762L9.0791 1.23535C9.36651 1.07868 9.69028 0.996467 10.0215 1H10.0225Z"
+                  />
+                </svg>
+                <span class="footer-item-text">Sayur - Sayuran</span>
+              </div>
+              <div class="footer-item">
+                <svg
+                  class="footer-icon"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.0225 1C10.3469 1.00388 10.6627 1.09017 10.9424 1.24707L11.0596 1.31836L11.1719 1.39746C11.4256 1.59107 11.6271 1.8434 11.7627 2.12988L11.7637 2.13086L13.4883 5.7832L17.3291 6.36621C17.6529 6.41532 17.9561 6.54541 18.2129 6.74121L18.3203 6.8291L18.4209 6.9248C18.6468 7.15379 18.8132 7.43403 18.9082 7.73926C19.0167 8.08801 19.0291 8.46026 18.9453 8.81543C18.8719 9.12651 18.7262 9.41769 18.5176 9.66211L18.4248 9.76367L15.6182 12.6221L16.2852 16.6611L16.3027 16.7969C16.334 17.114 16.2905 17.4355 16.1748 17.7344C16.0425 18.076 15.8196 18.3788 15.5244 18.6035C15.2286 18.8286 14.8732 18.9658 14.499 18.9941C14.1248 19.0225 13.7526 18.9405 13.4258 18.7607V18.7598L10.002 16.8789L6.57715 18.7627L6.5752 18.7637C6.24895 18.9418 5.87773 19.0228 5.50488 18.9941C5.13242 18.9654 4.77912 18.8292 4.48438 18.6055C4.18994 18.3819 3.96583 18.0803 3.83301 17.7402C3.70044 17.4006 3.66173 17.0309 3.71973 16.6719L3.7207 16.6699L4.38281 12.623L1.58008 9.77051C1.32049 9.50738 1.14033 9.17892 1.05566 8.82324C0.971038 8.46768 0.983565 8.09453 1.0918 7.74512C1.2001 7.39572 1.40109 7.07882 1.67871 6.83398L1.78613 6.74609C2.0432 6.54982 2.34657 6.4193 2.6709 6.37012L6.50977 5.78516L8.2373 2.13184C8.39504 1.79761 8.64298 1.51025 8.95801 1.30762L9.0791 1.23535C9.36651 1.07868 9.69028 0.996467 10.0215 1H10.0225Z"
+                  />
+                </svg>
+                <span class="footer-item-text">Buah - Buahan</span>
+              </div>
+              <div class="footer-item">
+                <svg
+                  class="footer-icon"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.0225 1C10.3469 1.00388 10.6627 1.09017 10.9424 1.24707L11.0596 1.31836L11.1719 1.39746C11.4256 1.59107 11.6271 1.8434 11.7627 2.12988L11.7637 2.13086L13.4883 5.7832L17.3291 6.36621C17.6529 6.41532 17.9561 6.54541 18.2129 6.74121L18.3203 6.8291L18.4209 6.9248C18.6468 7.15379 18.8132 7.43403 18.9082 7.73926C19.0167 8.08801 19.0291 8.46026 18.9453 8.81543C18.8719 9.12651 18.7262 9.41769 18.5176 9.66211L18.4248 9.76367L15.6182 12.6221L16.2852 16.6611L16.3027 16.7969C16.334 17.114 16.2905 17.4355 16.1748 17.7344C16.0425 18.076 15.8196 18.3788 15.5244 18.6035C15.2286 18.8286 14.8732 18.9658 14.499 18.9941C14.1248 19.0225 13.7526 18.9405 13.4258 18.7607V18.7598L10.002 16.8789L6.57715 18.7627L6.5752 18.7637C6.24895 18.9418 5.87773 19.0228 5.50488 18.9941C5.13242 18.9654 4.77912 18.8292 4.48438 18.6055C4.18994 18.3819 3.96583 18.0803 3.83301 17.7402C3.70044 17.4006 3.66173 17.0309 3.71973 16.6719L3.7207 16.6699L4.38281 12.623L1.58008 9.77051C1.32049 9.50738 1.14033 9.17892 1.05566 8.82324C0.971038 8.46768 0.983565 8.09453 1.0918 7.74512C1.2001 7.39572 1.40109 7.07882 1.67871 6.83398L1.78613 6.74609C2.0432 6.54982 2.34657 6.4193 2.6709 6.37012L6.50977 5.78516L8.2373 2.13184C8.39504 1.79761 8.64298 1.51025 8.95801 1.30762L9.0791 1.23535C9.36651 1.07868 9.69028 0.996467 10.0215 1H10.0225Z"
+                  />
+                </svg>
+                <span class="footer-item-text">Bibit Unggul</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="footer-section">
+            <h4 class="footer-contact-title">Kontak Kami</h4>
+            <div class="footer-list">
+              <div class="footer-item">
+                <svg
+                  class="footer-icon"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.0225 1C10.3469 1.00388 10.6627 1.09017 10.9424 1.24707L11.0596 1.31836L11.1719 1.39746C11.4256 1.59107 11.6271 1.8434 11.7627 2.12988L11.7637 2.13086L13.4883 5.7832L17.3291 6.36621C17.6529 6.41532 17.9561 6.54541 18.2129 6.74121L18.3203 6.8291L18.4209 6.9248C18.6468 7.15379 18.8132 7.43403 18.9082 7.73926C19.0167 8.08801 19.0291 8.46026 18.9453 8.81543C18.8719 9.12651 18.7262 9.41769 18.5176 9.66211L18.4248 9.76367L15.6182 12.6221L16.2852 16.6611L16.3027 16.7969C16.334 17.114 16.2905 17.4355 16.1748 17.7344C16.0425 18.076 15.8196 18.3788 15.5244 18.6035C15.2286 18.8286 14.8732 18.9658 14.499 18.9941C14.1248 19.0225 13.7526 18.9405 13.4258 18.7607V18.7598L10.002 16.8789L6.57715 18.7627L6.5752 18.7637C6.24895 18.9418 5.87773 19.0228 5.50488 18.9941C5.13242 18.9654 4.77912 18.8292 4.48438 18.6055C4.18994 18.3819 3.96583 18.0803 3.83301 17.7402C3.70044 17.4006 3.66173 17.0309 3.71973 16.6719L3.7207 16.6699L4.38281 12.623L1.58008 9.77051C1.32049 9.50738 1.14033 9.17892 1.05566 8.82324C0.971038 8.46768 0.983565 8.09453 1.0918 7.74512C1.2001 7.39572 1.40109 7.07882 1.67871 6.83398L1.78613 6.74609C2.0432 6.54982 2.34657 6.4193 2.6709 6.37012L6.50977 5.78516L8.2373 2.13184C8.39504 1.79761 8.64298 1.51025 8.95801 1.30762L9.0791 1.23535C9.36651 1.07868 9.69028 0.996467 10.0215 1H10.0225Z"
+                  />
+                </svg>
+                <span class="footer-item-text">0812-3313-8055</span>
+              </div>
+              <div class="footer-item">
+                <svg
+                  class="footer-icon"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.0225 1C10.3469 1.00388 10.6627 1.09017 10.9424 1.24707L11.0596 1.31836L11.1719 1.39746C11.4256 1.59107 11.6271 1.8434 11.7627 2.12988L11.7637 2.13086L13.4883 5.7832L17.3291 6.36621C17.6529 6.41532 17.9561 6.54541 18.2129 6.74121L18.3203 6.8291L18.4209 6.9248C18.6468 7.15379 18.8132 7.43403 18.9082 7.73926C19.0167 8.08801 19.0291 8.46026 18.9453 8.81543C18.8719 9.12651 18.7262 9.41769 18.5176 9.66211L18.4248 9.76367L15.6182 12.6221L16.2852 16.6611L16.3027 16.7969C16.334 17.114 16.2905 17.4355 16.1748 17.7344C16.0425 18.076 15.8196 18.3788 15.5244 18.6035C15.2286 18.8286 14.8732 18.9658 14.499 18.9941C14.1248 19.0225 13.7526 18.9405 13.4258 18.7607V18.7598L10.002 16.8789L6.57715 18.7627L6.5752 18.7637C6.24895 18.9418 5.87773 19.0228 5.50488 18.9941C5.13242 18.9654 4.77912 18.8292 4.48438 18.6055C4.18994 18.3819 3.96583 18.0803 3.83301 17.7402C3.70044 17.4006 3.66173 17.0309 3.71973 16.6719L3.7207 16.6699L4.38281 12.623L1.58008 9.77051C1.32049 9.50738 1.14033 9.17892 1.05566 8.82324C0.971038 8.46768 0.983565 8.09453 1.0918 7.74512C1.2001 7.39572 1.40109 7.07882 1.67871 6.83398L1.78613 6.74609C2.0432 6.54982 2.34657 6.4193 2.6709 6.37012L6.50977 5.78516L8.2373 2.13184C8.39504 1.79761 8.64298 1.51025 8.95801 1.30762L9.0791 1.23535C9.36651 1.07868 9.69028 0.996467 10.0215 1H10.0225Z"
+                  />
+                </svg>
+                <span class="footer-item-text">hasilkita_id@gmail.com</span>
+              </div>
+              <div class="footer-item">
+                <svg
+                  class="footer-icon"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.0225 1C10.3469 1.00388 10.6627 1.09017 10.9424 1.24707L11.0596 1.31836L11.1719 1.39746C11.4256 1.59107 11.6271 1.8434 11.7627 2.12988L11.7637 2.13086L13.4883 5.7832L17.3291 6.36621C17.6529 6.41532 17.9561 6.54541 18.2129 6.74121L18.3203 6.8291L18.4209 6.9248C18.6468 7.15379 18.8132 7.43403 18.9082 7.73926C19.0167 8.08801 19.0291 8.46026 18.9453 8.81543C18.8719 9.12651 18.7262 9.41769 18.5176 9.66211L18.4248 9.76367L15.6182 12.6221L16.2852 16.6611L16.3027 16.7969C16.334 17.114 16.2905 17.4355 16.1748 17.7344C16.0425 18.076 15.8196 18.3788 15.5244 18.6035C15.2286 18.8286 14.8732 18.9658 14.499 18.9941C14.1248 19.0225 13.7526 18.9405 13.4258 18.7607V18.7598L10.002 16.8789L6.57715 18.7627L6.5752 18.7637C6.24895 18.9418 5.87773 19.0228 5.50488 18.9941C5.13242 18.9654 4.77912 18.8292 4.48438 18.6055C4.18994 18.3819 3.96583 18.0803 3.83301 17.7402C3.70044 17.4006 3.66173 17.0309 3.71973 16.6719L3.7207 16.6699L4.38281 12.623L1.58008 9.77051C1.32049 9.50738 1.14033 9.17892 1.05566 8.82324C0.971038 8.46768 0.983565 8.09453 1.0918 7.74512C1.2001 7.39572 1.40109 7.07882 1.67871 6.83398L1.78613 6.74609C2.0432 6.54982 2.34657 6.4193 2.6709 6.37012L6.50977 5.78516L8.2373 2.13184C8.39504 1.79761 8.64298 1.51025 8.95801 1.30762L9.0791 1.23535C9.36651 1.07868 9.69028 0.996467 10.0215 1H10.0225Z"
+                  />
+                </svg>
+                <span class="footer-item-text">@HasilKita.id</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

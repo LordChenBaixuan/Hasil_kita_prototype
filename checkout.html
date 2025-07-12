@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HasilKita - Pembayaran</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Cairo:wght@300;400;500;600;700&family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Bellota+Text:wght@300;400;700&family=Expletus+Sans:wght@400;500;600;700&family=Roboto:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- CSS File -->
+  <link rel="stylesheet" href="checkout.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-left">
+      <h1 class="brand-title">HasilKita</h1>
+      <div class="brand-divider"></div>
+      <h2 class="page-title">Pembayaran</h2>
+    </div>
+
+    <div class="cart-icon">
+      <svg width="37" height="42" viewBox="0 0 37 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M26.1846 33.2291C28.2198 33.2291 29.8846 35.0981 29.8846 37.3829C29.8846 39.6676 28.2198 41.5366 26.1846 41.5366C24.1494 41.5366 22.4845 39.6676 22.4845 37.3829C22.4846 35.098 24.1495 33.2291 26.1846 33.2291ZM37 0.638672V4.79235H33.3L26.6397 19.9375L29.4243 25.0252C29.7017 25.5444 29.8868 26.2715 29.8868 26.9987C29.8868 29.7794 28.1947 31.1524 25.9 31.1524H4.26923V27.1584H25.447C25.7243 27.1584 25.9095 26.9506 25.9095 26.6392C25.9095 26.5358 25.7132 26.12 25.7132 26.12L23.8648 22.845H10.0829C8.69527 22.845 7.49214 22.0146 6.84536 20.6647L0.185179 7.80427C0.0751577 7.55855 1.43051e-06 7.18062 1.43051e-06 6.76595C1.43051e-06 5.62309 0.832856 4.79245 1.85 4.79245H29.2296L30.9875 0.638672H37ZM7.96932 33.2291C10.0045 33.2291 11.6693 35.0981 11.6693 37.3829C11.6693 39.6676 10.0045 41.5366 7.96932 41.5366C5.93414 41.5366 4.26923 39.6675 4.26923 37.3828C4.26923 35.098 5.93414 33.2291 7.96932 33.2291Z"
+          fill="#27C100" />
+      </svg>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Back Button -->
+    <button class="back-btn" onclick="goBack()">
+      < Kembali</button>
+
+        <!-- Divider Line -->
+        <div class="divider-line"></div>
+
+        <!-- Shipping Address Section -->
+        <section class="shipping-address">
+          <div class="address-header">
+            <div class="address-gradient"></div>
+          </div>
+          <div class="address-content">
+            <div class="address-info">
+              <div class="customer-info">
+                <h3 id="customerName">Shabrian Aulia Bahri (+62)</h3>
+                <p id="customerPhone">89234567891</p>
+              </div>
+              <div class="customer-address">
+                <p id="customerAddress">
+                  Desa Tembung Percut Sei Tuan, Jalan Besar Tembung , KAB. DELI
+                  SERDANG - PERCUT SEI TUAN, SUMATERA UTARA, ID 20371
+                </p>
+              </div>
+              <div class="address-actions">
+                <span class="address-badge">Utama</span>
+                <button class="btn-change-address" onclick="changeAddress()">
+                  Ubah
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="address-divider"></div>
+        </section>
+
+        <!-- Ordered Products Section -->
+        <section class="products-section">
+          <div class="section-header">
+            <h3>Produk Dipesan</h3>
+            <div class="seller-info">
+              <span class="seller-badge">Star+</span>
+              <span class="seller-name">REABIT</span>
+              <div class="chat-link">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 1V5H5V11.7109L2 14.7109V11H0V1H14ZM6 6H16V13H14V15.7109L11.2891 13H6V6Z"
+                    fill="#2DC38C" />
+                </svg>
+                <span>chat sekarang</span>
+              </div>
+            </div>
+            
+          </div>`
+
+          <div class="product-headers">
+            <span>Harga Satuan</span>
+            <span>Jumlah</span>
+            <span>Subtotal Produk</span>
+          </div>
+
+          <!-- Product List Container -->
+          <div id="checkout-products" class="product-list"></div>
+            <!-- Products will be loaded dynamically -->
+
+          <!-- Protection Service -->
+          <div class="protection-service">
+            <div class="product-item">
+  <input type="checkbox" id="protection-service" class="checkbox" style="margin-right: 10px" />
+  <div class="product-details-left">
+    <h4 class="product-name">Proteksi Kerusakan +</h4>
+    <p style="font-size: 14px; color: #555;">Melindungi Produkmu dari Kerusakan selama perjalanan</p>
+  </div>
+  <div class="product-pricing">
+    <div class="product-price" id="protection-unit-price">Rp. 2.000</div>
+    <div class="product-quantity" id="protection-quantity">0</div>
+    <div class="product-subtotal" id="protection-subtotal">Rp. 0</div>
+  </div>
+</div>
+
+        </section>
+
+        <!-- Voucher Section -->
+        <section class="voucher-section">
+          <div class="voucher-header">
+            <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M3.5 6.15799L14.08 1.098C14.1999 1.04059 14.3301 1.00768 14.4629 1.00119C14.5957 0.994703 14.7285 1.01477 14.8535 1.06021C14.9784 1.10565 15.0931 1.17555 15.1907 1.26583C15.2883 1.35612 15.367 1.46496 15.422 1.58599L17.5 6.15799M5 8.15799V6.15799M5 12.158V13.158M5 17.158V19.158"
+                stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M19 6.1582H3C1.89543 6.1582 1 7.05363 1 8.1582V17.1582C1 18.2628 1.89543 19.1582 3 19.1582H19C20.1046 19.1582 21 18.2628 21 17.1582V8.1582C21 7.05363 20.1046 6.1582 19 6.1582Z"
+                stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>Voucher Toko</span>
+          </div>
+          <button class="btn-voucher" onclick="selectVoucher()">
+            Pilih Voucher
+          </button>
+        </section>
+
+        <!-- Shipping & Message Section -->
+        <section class="shipping-message-section">
+          <div class="shipping-info">
+            <div class="shipping-option">
+              <span class="shipping-label">OPSI pengiriman :</span>
+              <span class="shipping-method">Hemat Kargo</span>
+            </div>
+            <p class="shipping-guarantee">Garansi Tiba : 10 - 15 Jul</p>
+            <div class="shipping-price">
+              <button class="btn-change-shipping" onclick="changeShipping()">
+                Ubah
+              </button>
+              <span class="shipping-cost">Rp. 10.000</span>
+            </div>
+          </div>
+
+          <div class="message-input">
+            <label for="orderMessage">Pesan :</label>
+            <input type="text" id="orderMessage" placeholder="Tulis pesan untuk penjual..." />
+          </div>
+        </section>
+
+        <!-- Payment Method Section -->
+        <section class="payment-section">
+          <h3>Metode Pembayaran</h3>
+          <div class="payment-methods">
+            <button class="payment-method" data-method="cod" onclick="selectPaymentMethod('cod')">
+              COD
+            </button>
+            <button class="payment-method" data-method="cod-check" onclick="selectPaymentMethod('cod-check')">
+              COD - Cek Dulu
+            </button>
+            <button class="payment-method" data-method="credit-debit" onclick="selectPaymentMethod('credit-debit')">
+              Kartu Kredit/Debit
+            </button>
+            <button class="payment-method" data-method="bri-debit" onclick="selectPaymentMethod('bri-debit')">
+              BRI Direct Debit
+            </button>
+            <button class="payment-method" data-method="bca-oneklik" onclick="selectPaymentMethod('bca-oneklik')">
+              BCA OneKlik
+            </button>
+            <button class="payment-method" data-method="other-bank" onclick="selectPaymentMethod('other-bank')">
+              Bank Lainnya
+            </button>
+          </div>
+        </section>
+
+        <!-- Order Summary Section -->
+        <section class="order-summary">
+          <div class="summary-details">
+            <div class="summary-row">
+              <span>Subtotal Pesanan</span>
+              <span id="subtotalOrder">Rp. 0</span>
+            </div>
+            <div class="summary-row">
+              <span>Subtotal Pengiriman</span>
+              <span id="subtotalShipping">Rp. 10.000</span>
+            </div>
+            <div class="summary-row">
+              <span>Biaya Layanan</span>
+              <span id="service-fee-amount">Rp. 1.000</span>
+            </div>
+            <div class="summary-total">
+              <span>Total Pembayaran</span>
+              <span id="totalPayment" class="total-amount">Rp. 0</span>
+            </div>
+          </div>
+          <button class="btn-create-order" onclick="createOrder()">
+            Buat Pesanan
+          </button>
+        </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-grid">
+        <!-- Company Info -->
+        <div class="footer-section">
+          <h3 class="footer-brand">HasilKita</h3>
+          <p class="footer-description">
+            Kami sebagai supplier produk hasil pertanian berkualitas
+            langsung dari petani Indonesia ke tangan anda. Dengan kerjasama
+            yang kami lakukan maka kami pastikan produk kami dapat
+            mengimbangi produk populer lainnya.
+          </p>
+        </div>
+
+        <!-- Categories -->
+        <div class="footer-section">
+          <h4 class="footer-title">Kategori</h4>
+          <ul class="footer-list">
+            <li class="footer-item">
+              <svg class="footer-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26">
+                </polygon>
+              </svg>
+              <span class="footer-text">Sayur - Sayuran</span>
+            </li>
+            <li class="footer-item">
+              <svg class="footer-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26">
+                </polygon>
+              </svg>
+              <span class="footer-text">Buah - Buahan</span>
+            </li>
+            <li class="footer-item">
+              <svg class="footer-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26">
+                </polygon>
+              </svg>
+              <span class="footer-text">Bibit Unggul</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+          <h4 class="footer-title">Kontak Kami</h4>
+          <ul class="footer-list">
+            <li class="footer-item">
+              <svg class="footer-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26">
+                </polygon>
+              </svg>
+              <span class="footer-text">08xx-xxxx-xxxx</span>
+            </li>
+            <li class="footer-item">
+              <svg class="footer-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26">
+                </polygon>
+              </svg>
+              <span class="footer-text">hasilkita_id@gmail.com</span>
+            </li>
+            <li class="footer-item">
+              <svg class="footer-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26">
+                </polygon>
+              </svg>
+              <span class="footer-text">@HasilKita.id</span>
+        </div>
+      </div>
+    </div>
+    </div>
+  </footer>
+
+  <!-- Success Modal -->
+  <div id="SuccessModal" class="modal" style="display: none">
+    <div class="modal-content">
+      <div class="success-icon">
+        <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="60" cy="60" r="60" fill="#4CAF50" />
+          <path d="M45 60L55 70L75 50" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+      <h2>Pembayaran Berhasil</h2>
+      <button class="btn-modal-close" onclick="closeSuccessModal()">
+        < Kembali </button>
+    </div>
+  </div>
+
+  <!-- JavaScript File -->
+  <script src="checkout.js"></script>
+</body>
+
+</html>
